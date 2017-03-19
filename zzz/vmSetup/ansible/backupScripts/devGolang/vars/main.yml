@@ -1,0 +1,5 @@
+---
+golang_ver: 1.8
+golang_platform: 64
+dir_golang: /usr/local/go
+dir_usr_local: /usr/local

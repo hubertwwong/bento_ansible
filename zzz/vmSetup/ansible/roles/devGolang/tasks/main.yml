@@ -1,0 +1,7 @@
+---
+- name: Install golang. Apt version
+  apt:
+    name: "{{item}}"
+    state: installed
+  with_items: "{{packages}}"
+  become: true

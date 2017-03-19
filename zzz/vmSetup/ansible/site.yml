@@ -1,0 +1,9 @@
+---
+- hosts: all
+
+  roles:
+  - common
+  - devGolang
+  - devPython
+  - devNvm
+  - shell

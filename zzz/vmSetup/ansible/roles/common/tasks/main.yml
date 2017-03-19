@@ -1,0 +1,14 @@
+---
+- name: Apt upgrading all packages.
+  apt:
+    update_cache: true
+    cache_valid_time: 3600
+    upgrade: dist
+  become: true
+  
+- name: Install basic packages.
+  apt:
+    name: "{{item}}"
+    state: installed
+  with_items: "{{packages}}"
+  become: true
