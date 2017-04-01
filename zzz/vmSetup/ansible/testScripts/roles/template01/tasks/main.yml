@@ -1,0 +1,5 @@
+---
+- name: Template text copy
+  template:
+    src:  "hello.txt.j2"
+    dest: "/tmp"

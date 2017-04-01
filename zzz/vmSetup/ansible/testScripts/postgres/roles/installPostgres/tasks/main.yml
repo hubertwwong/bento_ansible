@@ -1,0 +1,7 @@
+---
+- name: Install postgres
+  apt:
+    name: "{{item}}"
+    state: installed
+  with_items: "{{packages}}"
+  become: true

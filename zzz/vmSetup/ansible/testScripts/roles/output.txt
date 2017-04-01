@@ -1,0 +1,80 @@
+Using /home/vagrant/.ansible.cfg as config file
+Set default localhost to localhost
+Loading callback plugin default of type stdout, v2.0 from /usr/lib/python2.7/dist-packages/ansible/plugins/callback/__init__.pyc
+
+PLAYBOOK: site.yml *************************************************************
+1 plays in site.yml
+
+PLAY [all] *********************************************************************
+
+TASK [setup] *******************************************************************
+Using module file /usr/lib/python2.7/dist-packages/ansible/modules/core/system/setup.py
+<localhost> ESTABLISH LOCAL CONNECTION FOR USER: vagrant
+<localhost> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo ~/.ansible/tmp/ansible-tmp-1489989123.22-80150960892696 `" && echo ansible-tmp-1489989123.22-80150960892696="` echo ~/.ansible/tmp/ansible-tmp-1489989123.22-80150960892696 `" ) && sleep 0'
+<localhost> PUT /tmp/tmpnvSA8E TO /home/vagrant/.ansible/tmp/ansible-tmp-1489989123.22-80150960892696/setup.py
+<localhost> EXEC /bin/sh -c 'chmod u+x /home/vagrant/.ansible/tmp/ansible-tmp-1489989123.22-80150960892696/ /home/vagrant/.ansible/tmp/ansible-tmp-1489989123.22-80150960892696/setup.py && sleep 0'
+<localhost> EXEC /bin/sh -c '/usr/bin/python /home/vagrant/.ansible/tmp/ansible-tmp-1489989123.22-80150960892696/setup.py; rm -rf "/home/vagrant/.ansible/tmp/ansible-tmp-1489989123.22-80150960892696/" > /dev/null 2>&1 && sleep 0'
+ok: [localhost]
+
+TASK [template01 : Template text copy] *****************************************
+task path: /vagrant/zzz/vmSetup/ansible/testScripts/roles/template01/tasks/main.yml:2
+looking for "../templates/hello.txt.j2" at "/vagrant/zzz/vmSetup/ansible/testScripts/roles/template01/templates/../templates/hello.txt.j2"
+<localhost> ESTABLISH LOCAL CONNECTION FOR USER: vagrant
+<localhost> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo ~/.ansible/tmp/ansible-tmp-1489989123.67-138041633603965 `" && echo ansible-tmp-1489989123.67-138041633603965="` echo ~/.ansible/tmp/ansible-tmp-1489989123.67-138041633603965 `" ) && sleep 0'
+Using module file /usr/lib/python2.7/dist-packages/ansible/modules/core/files/stat.py
+<localhost> PUT /tmp/tmpJ6gjnb TO /home/vagrant/.ansible/tmp/ansible-tmp-1489989123.67-138041633603965/stat.py
+<localhost> EXEC /bin/sh -c 'chmod u+x /home/vagrant/.ansible/tmp/ansible-tmp-1489989123.67-138041633603965/ /home/vagrant/.ansible/tmp/ansible-tmp-1489989123.67-138041633603965/stat.py && sleep 0'
+<localhost> EXEC /bin/sh -c '/usr/bin/python /home/vagrant/.ansible/tmp/ansible-tmp-1489989123.67-138041633603965/stat.py && sleep 0'
+Using module file /usr/lib/python2.7/dist-packages/ansible/modules/core/files/stat.py
+<localhost> PUT /tmp/tmprh4xNn TO /home/vagrant/.ansible/tmp/ansible-tmp-1489989123.67-138041633603965/stat.py
+<localhost> EXEC /bin/sh -c 'chmod u+x /home/vagrant/.ansible/tmp/ansible-tmp-1489989123.67-138041633603965/ /home/vagrant/.ansible/tmp/ansible-tmp-1489989123.67-138041633603965/stat.py && sleep 0'
+<localhost> EXEC /bin/sh -c '/usr/bin/python /home/vagrant/.ansible/tmp/ansible-tmp-1489989123.67-138041633603965/stat.py && sleep 0'
+<localhost> PUT /tmp/tmpFaqrTQ TO /home/vagrant/.ansible/tmp/ansible-tmp-1489989123.67-138041633603965/source
+<localhost> EXEC /bin/sh -c 'chmod u+x /home/vagrant/.ansible/tmp/ansible-tmp-1489989123.67-138041633603965/ /home/vagrant/.ansible/tmp/ansible-tmp-1489989123.67-138041633603965/source && sleep 0'
+Using module file /usr/lib/python2.7/dist-packages/ansible/modules/core/files/copy.py
+<localhost> PUT /tmp/tmpFGu5hS TO /home/vagrant/.ansible/tmp/ansible-tmp-1489989123.67-138041633603965/copy.py
+<localhost> EXEC /bin/sh -c 'chmod u+x /home/vagrant/.ansible/tmp/ansible-tmp-1489989123.67-138041633603965/ /home/vagrant/.ansible/tmp/ansible-tmp-1489989123.67-138041633603965/copy.py && sleep 0'
+<localhost> EXEC /bin/sh -c '/usr/bin/python /home/vagrant/.ansible/tmp/ansible-tmp-1489989123.67-138041633603965/copy.py && sleep 0'
+<localhost> EXEC /bin/sh -c 'rm -f -r /home/vagrant/.ansible/tmp/ansible-tmp-1489989123.67-138041633603965/ > /dev/null 2>&1 && sleep 0'
+changed: [localhost] => {
+    "changed": true, 
+    "checksum": "25b3e824c54bf6bdfd0a1941f935262b92ce8072", 
+    "dest": "/tmp/hello.txt.j2", 
+    "gid": 1000, 
+    "group": "vagrant", 
+    "invocation": {
+        "module_args": {
+            "backup": false, 
+            "content": null, 
+            "delimiter": null, 
+            "dest": "/tmp/hello.txt.j2", 
+            "directory_mode": null, 
+            "follow": true, 
+            "force": true, 
+            "group": null, 
+            "mode": null, 
+            "original_basename": "hello.txt.j2", 
+            "owner": null, 
+            "regexp": null, 
+            "remote_src": null, 
+            "selevel": null, 
+            "serole": null, 
+            "setype": null, 
+            "seuser": null, 
+            "src": "/home/vagrant/.ansible/tmp/ansible-tmp-1489989123.67-138041633603965/source", 
+            "unsafe_writes": null, 
+            "validate": null
+        }
+    }, 
+    "md5sum": "f0f9bc341c1b098d88abc7c77d979376", 
+    "mode": "0664", 
+    "owner": "vagrant", 
+    "size": 24, 
+    "src": "/home/vagrant/.ansible/tmp/ansible-tmp-1489989123.67-138041633603965/source", 
+    "state": "file", 
+    "uid": 1000
+}
+
+PLAY RECAP *********************************************************************
+localhost                  : ok=2    changed=1    unreachable=0    failed=0   
+

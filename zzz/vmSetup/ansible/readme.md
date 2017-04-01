@@ -5,6 +5,18 @@ Put the bootstrap script into vagrantfile to get it to setup enough of the VM to
 
 
 
+# More misc notes
+
+ansible-playbook -i "localhost," -c local 
+
+
+
+# Intial setup to do
+
+https://serversforhackers.com/an-ansible-tutorial
+http://purplerockscissors.com/notes/3687/ansible-automation
+use -vvvvv to see paths...
+
 
 
 # COMMANDS
@@ -13,7 +25,7 @@ Put the bootstrap script into vagrantfile to get it to setup enough of the VM to
 ansible-playbook playbook.yml
 
 ## run a play in a playbook localhost
-ansible-playbook -i "localhost," -c local helloworld.yml
+ansible-playbook -i "localhost" -c local helloworld.yml
 
 ## adhoc
 ansible all -m shell -a 'echo hello world’
