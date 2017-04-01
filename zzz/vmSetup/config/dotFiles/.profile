@@ -1,10 +1,9 @@
 #!/bin/bash
 
 echo ">>> .profile >"
-echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
 
 if [ -f ~/.bashrc ]; then
-	echo "sourcing bashrc"
+	echo ">>> .profile > sourcing bashrc"
   source ~/.bashrc
 fi
 #export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

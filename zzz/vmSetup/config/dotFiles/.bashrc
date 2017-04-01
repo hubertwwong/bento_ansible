@@ -2,8 +2,7 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-echo ">> bootstrap.sh >"
-echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+echo ">>> .bashrc >"
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
