@@ -22,8 +22,10 @@ source /vagrant/zzz/vmSetup/config/dotFiles/.env
 ##############################################################################
 
 if command -v tmux>/dev/null; then
-  [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
+  [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux -2
 fi
+
+# Note the -2 is for 256 colors. Might not work for all shells.
 
 ## LANGS
 ##############################################################################

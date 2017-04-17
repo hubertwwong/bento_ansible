@@ -1,0 +1,6 @@
+---
+- hosts: all
+- include: basic/site.yml
+- include: docker/site.yml
+- include: updateTimezone/site.yml
+- include: ansibleHosts/site.yml

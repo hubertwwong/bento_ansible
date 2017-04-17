@@ -1,0 +1,6 @@
+---
+- name: Copy ansible host file to /etc/ansible/
+  copy:
+    src: files/hosts
+    dest: /etc/ansible/
+  become: true

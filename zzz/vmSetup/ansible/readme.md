@@ -55,8 +55,8 @@ This gives you a ton of syntax errors.
 ## localhost setp
 
 http://ansible.pickle.io/post/86598332429/running-ansible-playbook-in-localhost
-
-
+http://ansible.pickle.io/post/86598332429/running-ansible-playbook-in-localhost
+Put this in a anislbe setup.
 
 
 # LINKS

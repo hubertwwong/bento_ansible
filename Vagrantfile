@@ -92,8 +92,12 @@ Vagrant.configure("2") do |config|
   #config.vm.provision "shell", privileged: false, path: "zzz/vmSetup/ansible/bootstrapAnsible.sh"
 
   # Enable provisioning with Ansible.
+  # config.vm.provision "ansible_local" do |ansible|
+  #   ansible.playbook = "zzz/vmSetup/ansible/basic/site.yml"
+  # end
+
   config.vm.provision "ansible_local" do |ansible|
-    ansible.playbook = "zzz/vmSetup/ansible/basic/site.yml"
+    ansible.playbook = "zzz/vmSetup/ansible/site.yml"
   end
 
   # gui mode.

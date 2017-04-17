@@ -33,3 +33,5 @@ sudo cp -rf $VMSETUP_PATH/ansible/roles/common/files/ansible/hosts /etc/ansible
 
 # delete the temp directory in home.
 sudo rm -rf /home/vagrant/.ansible
+
+# Note I dont think you need this with vagrant

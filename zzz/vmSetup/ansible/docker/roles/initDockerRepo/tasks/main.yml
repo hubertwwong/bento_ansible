@@ -1,0 +1,15 @@
+# Add an Apt signing key, uses whichever key is at the URL
+---
+- name: Query dist name.
+  shell: lsb_release -cs
+  register: distro_name
+- name: Adding gpg key for docker
+  apt_key:
+    url: "https://download.docker.com/linux/ubuntu/gpg"
+    state: present
+  become: true
+- name: Add docker ce repo to apt. Note the lsb_release returns the dist name. Need quotes.
+  apt_repository:
+    repo: "deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ansible_distribution_release}} stable"
+    state: present
+  become: true

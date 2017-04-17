@@ -1,0 +1,5 @@
+---
+- name: Set timezone to US/Pacific
+  timezone:
+    name: US/Pacific
+  become: true
