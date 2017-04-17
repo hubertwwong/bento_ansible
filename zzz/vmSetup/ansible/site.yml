@@ -1,6 +1,9 @@
 ---
 - hosts: all
-- include: basic/site.yml
-- include: docker/site.yml
-- include: updateTimezone/site.yml
-- include: ansibleHosts/site.yml
+- include: basic/basicLibsAndShell/site.yml
+- include: basic/docker/site.yml
+- include: basic/updateTimezone/site.yml
+- include: basic/ansibleHosts/site.yml
+- include: dev/golang/site.yml
+- include: dev/nvm/site.yml
+- include: dev/python/site.yml
