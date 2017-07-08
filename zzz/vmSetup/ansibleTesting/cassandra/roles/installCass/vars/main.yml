@@ -1,0 +1,6 @@
+---
+cass_version: "310x"
+cass_url: "http://www.apache.org/dist/cassandra/debian"
+cass_key_url: "https://www.apache.org/dist/cassandra/KEYS"
+packages:
+  - "cassandra"

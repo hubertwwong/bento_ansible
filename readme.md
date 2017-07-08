@@ -27,6 +27,10 @@ A slightly clean up vagrant scripts to setup a virtual machine. Uses ansible scr
 "ansible_local" seem to be the thing that made the differene in getting ansible scripts to work in windows 10. I remember trying "ansible" in the vagrantfile and didn't have any luck with that.
 
 
+deb https://hubert@sweetyhigh.com:Rapture4koala%40debian.datastax.com/enterprise stable main
+
+
+
 # Links
 
 https://github.com/chef/bento

@@ -1,0 +1,17 @@
+---
+- name: Add apt key repo
+  apt_key:
+    url: "{{cass_key_url}}"
+  become: true
+- name: Add apt source.
+  apt_repository:
+    repo: "deb {{cass_url}} {{cass_version}} main"
+    state: present
+  become: true
+- name: Install cassandra.
+  apt:
+    name: "{{item}}"
+    state: present
+    update_cache: "yes"
+  with_items: "{{packages}}"
+  become: true

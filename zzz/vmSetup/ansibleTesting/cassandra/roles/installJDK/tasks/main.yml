@@ -1,0 +1,7 @@
+---
+- name: Install JDK.
+  apt:
+    name: "{{item}}"
+    state: installed
+  with_items: "{{packages}}"
+  become: true

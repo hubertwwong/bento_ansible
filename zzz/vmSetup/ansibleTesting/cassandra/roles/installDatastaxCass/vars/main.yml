@@ -1,0 +1,7 @@
+---
+username: "hubert@sweetyhigh.com"
+password: "Rapture4koala"
+datastax_url: "debian.datastax.com/enterprise"
+datastax_key_url: "https://debian.datastax.com/debian/repo_key"
+packages:
+  - "dse-full"

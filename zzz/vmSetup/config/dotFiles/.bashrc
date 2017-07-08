@@ -172,3 +172,7 @@ if ! shopt -oq posix; then
 fi
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+# Traodoor ls colors.
+# https://github.com/trapd00r/LS_COLORS
+eval $(dircolors -b $HOME/.dircolors)

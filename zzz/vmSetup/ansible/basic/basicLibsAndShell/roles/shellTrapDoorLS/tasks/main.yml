@@ -1,0 +1,5 @@
+---
+- name: Install trapdoor ls.
+  get_url:
+    url: "{{trapdoor_url}}"
+    dest: "{{ansible_env.HOME}}/.dircolors"

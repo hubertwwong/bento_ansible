@@ -1,0 +1,17 @@
+---
+- name: Add apt key
+  apt_key:
+    url: "{{datastax_key_url}}"
+  become: true
+- name: Add apt source.
+  apt_repository:
+    repo: "deb https://{{username}}:{{password}}%40{{datastax_url}} stable main"
+    state: present
+  become: true
+- name: Install Datastax version of cassandra.
+  apt:
+    name: "{{item}}"
+    state: present
+    update_cache: "yes"
+  with_items: "{{packages}}"
+  become: true
