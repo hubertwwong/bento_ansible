@@ -25,10 +25,14 @@ BCYN="\[\033[46m\]" # background cyan
 BWHT="\[\033[47m\]" # background white
 
 # DOT DOT DOT...
+# ls --color=auto
+
+# Colorize the ls output
+alias ls='ls --color=auto'
 alias ll='ls -alF'
 alias la='ls -A'
 #alias l='ls -CF'
-alias l="ls -la"       # List in long format, include dotfiles
+alias l="ls -al"       # List in long format, include dotfiles
 alias ld="ls -ld */"   # List in long format, only directories
 alias ..="cd .."
 alias ...="cd ../.."
