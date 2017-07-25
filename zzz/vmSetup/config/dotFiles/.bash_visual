@@ -49,13 +49,13 @@ if [ "$color_prompt" = yes ]; then
 		# MY PROMPT
     # exporting the PS1 might be needed for the git branch
     #P_START="${FWHT}┌"
-    P_USER_HOST="(${FCYN}\u${FWHT}@${FCYN}\h${FWHT})"
-    P_PWD=" (${FYEL}\w${FWHT})"
+    P_USER_HOST="${FCYN}\u${FWHT}@${FCYN}\h ${FWHT}|"
+    P_PWD=" ${FYEL}\w ${FWHT}|"
     P_GIT="${FMAG}\$(parse_git_branch)${FWHT}"
-    P_TIME=" (${FYEL}\T${FWHT})"
+    P_TIME=" ${FYEL}\T${RS}"
     #P_END="\n${FWHT}└> "
-		P_END="\n${FWHT}-> "
-    export PS1="${P_USER_HOST}${P_PWD}${P_GIT}${P_TIME}${P_END}"
+		P_END="\n${FWHT}\$${RS} "
+    export PS1="${P_USER_HOST}${P_PWD}${P_TIME}${P_GIT}${P_END}"
 		#PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 else
 		#PS1="${RED}bbb\u@\h${WHITE} \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
