@@ -3,6 +3,7 @@
 - include: basic/basicLibsAndShell/site.yml
 - include: basic/updateTimezone/site.yml
 - include: basic/ansibleHosts/site.yml
+- include: basic/docker/site.yml
 - include: dev/golang/site.yml
 - include: dev/nvm/site.yml
 - include: dev/python/site.yml
