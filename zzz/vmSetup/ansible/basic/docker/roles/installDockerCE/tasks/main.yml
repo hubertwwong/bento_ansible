@@ -1,8 +1,15 @@
 ---
 - name: Install docker other required packages.
   apt:
-    name: "{{item}}"
+    name: "{{ item }}"
     state: installed
     update_cache: yes
-  with_items: "{{packages}}"
+  with_items: "{{ packages }}"
+  become: true
+- name: Adding user {{ ansible_user | default(lookup('env', 'USER'), True) }} to docker group. You don't need sudo command for docker now.
+  user: name={{ ansible_user | default(lookup('env', 'USER'), True) }}
+        group=docker
+        shell=/bin/bash
+        groups=sudo
+        append=yes
   become: true

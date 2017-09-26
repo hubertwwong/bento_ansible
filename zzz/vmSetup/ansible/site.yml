@@ -1,9 +1,9 @@
 ---
 - hosts: all
-- include: basic/basicLibsAndShell/site.yml
-- include: basic/updateTimezone/site.yml
-- include: basic/ansibleHosts/site.yml
-- include: basic/docker/site.yml
-- include: dev/golang/site.yml
-- include: dev/nvm/site.yml
-- include: dev/python/site.yml
+- import_playbook: basic/basicLibsAndShell/site.yml
+- import_playbook: basic/updateTimezone/site.yml
+- import_playbook: basic/ansibleHosts/site.yml
+- import_playbook: basic/docker/site.yml
+- import_playbook: dev/golang/site.yml
+- import_playbook: dev/nvm/site.yml
+- import_playbook: dev/python/site.yml
