@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "> init.bash"
-bash basic.bash
+bash install/basic.bash
 #bash installJDK.bash
 #bash installDataCass.bash
-bash initTrapDoorLS.bash
+bash install/initTrapDoorLS.bash

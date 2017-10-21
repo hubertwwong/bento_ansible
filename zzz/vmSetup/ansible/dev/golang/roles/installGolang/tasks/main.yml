@@ -3,5 +3,6 @@
   apt:
     name: "{{item}}"
     state: installed
+    update_cache: true
   with_items: "{{packages}}"
   become: true

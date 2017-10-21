@@ -1,0 +1,8 @@
+---
+- hosts: all
+- import_playbook: ../basic/basicLibsAndShell/site.yml
+- import_playbook: ../basic/updateTimezone/site.yml
+- import_playbook: ../basic/ansibleHosts/site.yml
+- import_playbook: ../dev/golang/site.yml
+- import_playbook: ../dev/nvm/site.yml
+- import_playbook: ../dev/python/site.yml

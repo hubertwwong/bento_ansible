@@ -13,8 +13,9 @@ Vagrant.configure("2") do |config|
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
   #config.vm.box = "wholebits/ubuntu17.04-64"
-  #config.vm.box = "bento/debian-9.0"
+  #config.vm.box = "bento/debian-9.1"
   config.vm.box = "bento/ubuntu-17.04"
+  #config.vm.box = "bento/ubuntu-16.04"
   #config.vm.box_version = "2.3.7"
 
   # BENTO BOXES.
@@ -28,11 +29,11 @@ Vagrant.configure("2") do |config|
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. In the example below,
   # accessing "localhost:8080" will access port 80 on the guest machine.
-  # config.vm.network "forwarded_port", guest: 80, host: 8080
+  #config.vm.network "forwarded_port", guest: 8888, host: 8888
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
-  config.vm.network "private_network", ip: "192.168.33.10"
+  config.vm.network "private_network", ip: "192.168.33.11"
 
   # Create a public network, which generally matched to bridged network.
   # Bridged networks make the machine appear as another physical device on
@@ -45,21 +46,6 @@ Vagrant.configure("2") do |config|
   # argument is a set of non-required options.
   # config.vm.synced_folder "../data", "/vagrant_data"
 
-  # Provider-specific configuration so you can fine-tune various
-  # backing providers for Vagrant. These expose provider-specific options.
-  # Example for VirtualBox:
-  #
-  # config.vm.provider "virtualbox" do |vb|
-  #   # Display the VirtualBox GUI when booting the machine
-  #   vb.gui = true
-  #
-  #   # Customize the amount of memory on the VM:
-  #   vb.memory = "1024"
-  # end
-  #
-  # View the documentation for the provider you are using for more
-  # information on available options.
-
   # Define a Vagrant Push strategy for pushing to Atlas. Other push strategies
   # such as FTP and Heroku are also available. See the documentation at
   # https://docs.vagrantup.com/v2/push/atlas.html for more information.
@@ -67,13 +53,7 @@ Vagrant.configure("2") do |config|
   #   push.app = "YOUR_ATLAS_USERNAME/YOUR_APPLICATION_NAME"
   # end
 
-  # Enable provisioning with a shell script. Additional provisioners such as
-  # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
-  # documentation for more information about their specific syntax and use.
-  # config.vm.provision "shell", inline: <<-SHELL
-  #   apt-get update
-  #   apt-get install -y apache2
-  # SHELL
+
 
   # MY STUFF
   ############################################################################
@@ -87,31 +67,17 @@ Vagrant.configure("2") do |config|
   # do NOT download the iso file from a webserver
   config.vbguest.no_remote = false
 
-  # run my vagrant provsion shell script.
-  # i'm not sure of the path. is it internal to the vm?
-  #config.vm.provision "shell", privileged: false, path: "zzz/vmSetup/config/dotFiles/.env"
-  #config.vm.provision "shell", privileged: true, path: "zzz/vmSetup/init/init_links.sh"
-  #config.vm.provision "shell", privileged: false, path: "ls -al zzz/vmSetup/init/init_links.sh"
-  #config.vm.provision "shell", privileged: false, path: "zzz/vmSetup/init/init_links.sh"
-  #config.vm.provision "shell", privileged: false, path: "zzz/vmSetup/ansible/bootstrap.sh"
-  #config.vm.provision "shell", privileged: false, path: "ansible-playbook zzz/vmSetup/ansible/site.yml"
-  #config.vm.provision "shell", privileged: false, path: "zzz/vmSetup/ansible/bootstrapAnsible.sh"
-
-  # Enable provisioning with Ansible.
-  # config.vm.provision "ansible_local" do |ansible|
-  #   ansible.playbook = "zzz/vmSetup/ansible/basic/site.yml"
-  # end
-
   config.vm.provision "ansible_local" do |ansible|
-    ansible.playbook = "zzz/vmSetup/ansible/site.yml"
+    #ansible.playbook = "zzz/vmSetup/ansible/ver/minimal.yml"
+    ansible.playbook = "zzz/vmSetup/ansible/ver/allProgLangs.yml"
   end
 
-  # gui mode.
-  #config.gui = true
-  #config.vm.provider "virtualbox" do |vb|
-  #  vb.gui = true
-  #  vg.memory "8192"
-  #end
+  config.vm.provider "virtualbox" do |v|
+    #v.memory = 4096
+    #v.cpus = 4
+    v.memory = 2048
+    v.cpus = 2
+  end
 
   # @see: https://www.vagrantup.com/docs/vagrantfile/ssh_settings.html	
   config.ssh.insert_key = false
