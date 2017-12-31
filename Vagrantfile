@@ -12,14 +12,22 @@ Vagrant.configure("2") do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
-  #config.vm.box = "wholebits/ubuntu17.04-64"
+
+  # Debian boxes
   #config.vm.box = "bento/debian-9.1"
+  #config.vm.box = "terminal-labs/tl-debian-jesse-64bit-lxc"
+  #config.vm.box = "fscm/stretch64"
+  
+  # Ubuntu boxes
+  # known working ones. 16.04, 17.04
+  #config.vm.box = "bento/ubuntu-17.10"
   config.vm.box = "bento/ubuntu-17.04"
   #config.vm.box = "bento/ubuntu-16.04"
-  #config.vm.box_version = "2.3.7"
+  #config.vm.box = "wholebits/ubuntu17.04-64"
 
-  # BENTO BOXES.
+  # List of boxes
   # https://app.vagrantup.com/bento
+  # https://app.vagrantup.com/boxes/search
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -61,7 +69,9 @@ Vagrant.configure("2") do |config|
   # guest. This is going to try to copy the iso and install it there.
   # might be better.
   # you might want to remove the install from the bash scripts.
-  config.vbguest.auto_update = true
+  #config.vbguest.auto_update = true
+  config.vbguest.auto_update = false
+  # vagrant vbguest plugin says to turn this setting off.
   # not sure if you need this...
   config.vbguest.no_install = false
   # do NOT download the iso file from a webserver

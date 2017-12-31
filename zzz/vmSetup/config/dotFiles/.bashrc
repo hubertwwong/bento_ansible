@@ -34,6 +34,13 @@ case $- in
       *) return;;
 esac
 
+
+## VAGRANT FIX
+##############################################################################
+
+# https://github.com/hashicorp/vagrant/issues/9143
+VAGRANT_PREFER_SYSTEM_BIN=1
+
 ## HISTORY
 ##############################################################################
 
@@ -64,3 +71,4 @@ if ! shopt -oq posix; then
 fi
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

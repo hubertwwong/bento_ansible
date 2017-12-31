@@ -6,3 +6,4 @@
 - import_playbook: ../dev/golang/site.yml
 - import_playbook: ../dev/nvm/site.yml
 - import_playbook: ../dev/python/site.yml
+- import_playbook: ../dev/java/site.yml

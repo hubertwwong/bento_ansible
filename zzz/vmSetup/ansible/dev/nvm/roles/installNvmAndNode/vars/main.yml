@@ -1,4 +1,4 @@
 ---
 dir_nvm: /home/vagrant/.nvm
-nvm_ver: 0.33.1
+nvm_ver: 0.33.6
 node_ver: stable
